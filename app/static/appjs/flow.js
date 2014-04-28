@@ -84,6 +84,28 @@ $(function() {
         update();
     });
 
+
+    // 带宽资源统计表
+    var bar_chart = new Morris.Bar({
+        element: 'bar-chart',
+        resize: true,
+        data: [
+            {y: '10月', a: 0.13, b: 2.8},
+            {y: '11月', a: 0.15, b: 2.4},
+            {y: '12月', a: 0.10, b: 2.0},
+            {y: '01月', a: 0.12, b: 2.3},
+            {y: '02月', a: 0.16, b: 2.5},
+            {y: '03月', a: 0.11, b: 2.1},
+            {y: '04月', a: 0.17, b: 2.6}
+        ],
+        barColors: ['#00a65a', '#f56954'],
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['下行流量', '上行流量'],
+        hideHover: 'auto',
+        yLabelFormat: function (x) { return x + " GB"}
+    });
+
     // 端口表格
     $('#port-table').dataTable({
         "bPaginate": true,
@@ -115,9 +137,9 @@ $(function() {
     var sparkline_id_up;
     var sparkline_id_down;
 
-    var random_range = [0,20,20,2,2,10,10,5,5,10,10,10,10,1,1,1,1,1,1,1,1];
+    var random_range = [0,20,20,20,20];
     
-    for (var i = 1; i <= 20; i++ ) {
+    for (var i = 1; i <= 4; i++ ) {
         sparkline_id_up = '#sparkline-' + i;
         // console.log(sparkline_id_up);
         res_value_up = getRandomValue(i);

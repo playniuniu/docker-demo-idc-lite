@@ -24,13 +24,13 @@
 <section class="content">
     <div class="row">
         <!-- Left col -->
-        <div class="col-md-5">
+        <div class="col-md-6">
             
-            <!-- 出口流量 -->
+            <!-- 实时流量 -->
             <div class="box box-primary">
                 <div class="box-header">
                     <i class="fa fa-bar-chart-o"></i>
-                    <h3 class="box-title zh">出口流量</h3>
+                    <h3 class="box-title zh">实时流量</h3>
                     <div class="box-tools pull-right">
                         实时&nbsp;
                         <div class="btn-group" id="realtime" data-toggle="btn-toggle">
@@ -42,73 +42,68 @@
                 <div class="box-body">
                     <div id="interactive" style="height: 300px;"></div>
                 </div><!-- /.box-body-->
-            </div><!-- / 出口流量 -->
+            </div><!-- / 实时流量 -->
 
         </div><!-- Left col -->
 
         <!-- Right col -->
-        <div class="col-md-7">
+        <div class="col-md-6">
+            <!-- 历史统计 -->
+            <div class="box box-danger zh">
 
-            <!-- 网络设备状态 -->
-            <div class="box box-warning">
-
+                <!-- box-header -->
                 <div class="box-header">
-                    <i class="fa fa-sitemap"></i>
-                    <h3 class="box-title"><span class="zh">网络设备状态</span></h3>
+                    <!-- tools box -->
+                    <i class="fa fa-signal"></i>
+                    <h3 class="box-title"><span class="zh">历史统计</span></h3>
                 </div><!-- /.box-header -->
+                
+                <!-- box-body -->
+                <div class="box-body no-padding">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <!-- bar chart -->
+                            <div class="chart" id="bar-chart" style="height: 250px;"></div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="pad">
+                                <!-- Progress bars -->
+                                <div class="clearfix">
+                                    <span class="pull-left">P2P 业务</span>
+                                    <small class="pull-right">65%</small>
+                                </div>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-green" style="width: 65%;"></div>
+                                </div>
 
-                <div class="box-body">
-                    <table class="table table-bordered zh table-vcenter" >
-                        <tr>
-                            <th>网络设备编号</th>
-                            <th>设备类型</th>
-                            <th>已连接端口</th>
-                            <th>上行流量</th>
-                            <th>下行流量</th>
-                        </tr>
-                        <tr>
-                            <td>NE40E-1</td>
-                            <td>路由器</td>
-                            <td>30 / 100</td>
-                            <td><div id="sparkline-1"></div></td>
-                            <td><div id="sparkline-2"></div></td>
-                        </tr>
-                        <tr>
-                            <td>NE40E-2</td>
-                            <td>路由器</td>
-                            <td>46 / 100</td>
-                            <td><div id="sparkline-3"></div></td>
-                            <td><div id="sparkline-4"></div></td>
-                        </tr>
-                        <tr>
-                            <td>S9312-1</td>
-                            <td>交换机</td>
-                            <td>18 / 60</td>
-                            <td><div id="sparkline-5"></div></td>
-                            <td><div id="sparkline-6"></div></td>
-                        </tr>
-                        <tr>
-                            <td>S9312-2</td>
-                            <td>交换机</td>
-                            <td>28 / 70</td>
-                            <td><div id="sparkline-7"></div></td>
-                            <td><div id="sparkline-8"></div></td>
-                        </tr>
+                                <div class="clearfix">
+                                    <span class="pull-left">上网</span>
+                                    <small class="pull-right">12%</small>
+                                </div>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-red" style="width: 12%;"></div>
+                                </div>
 
-                    </table>
+                                <div class="clearfix">
+                                    <span class="pull-left">Web服务</span>
+                                    <small class="pull-right">10%</small>
+                                </div>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-light-blue" style="width: 10%;"></div>
+                                </div>
+
+                                <div class="clearfix">
+                                    <span class="pull-left">其他</span>
+                                    <small class="pull-right">7%</small>
+                                </div>
+                                <div class="progress xs">
+                                    <div class="progress-bar progress-bar-aqua" style="width: 7%;"></div>
+                                </div>
+                            </div><!-- /.pad -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row - inside box -->
                 </div><!-- /.box-body -->
-
-                <div class="box-footer clearfix">
-                    <ul class="pagination pagination-sm no-margin pull-right">
-                        <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
-                </div><!-- /.box-footer --> 
-            </div><!-- / 网络设备状态 -->
-
+            </div><!-- / 历史统计 -->
         </div><!-- Right col -->
 
     </div>
@@ -116,12 +111,12 @@
     <div class="row">
         <div class="col-md-12">
             
-            <!-- 设备端口详情 -->
+            <!-- 上联端口详情 -->
             <div class="box box-success">
 
                 <div class="box-header">
                     <i class="fa fa-sitemap"></i>
-                    <h3 class="box-title"><span class="zh">设备端口详情</span></h3>
+                    <h3 class="box-title"><span class="zh">端口详情</span></h3>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive">
                     <table id="port-table" class="table table-bordered table-striped table-vcenter zh">
@@ -129,9 +124,7 @@
                             <tr>
                                 <th>端口号</th>
                                 <th>端口类型</th>
-                                <th>所属设备</th>
-                                <th>所属客户</th>
-                                <th>IP 地址</th>
+                                <th>IP 地址段</th>
                                 <th>上行流量</th>
                                 <th>下行流量</th>
                             </tr>
@@ -141,68 +134,24 @@
                             <tr>
                                 <td>GigabitEthernet2/2/3</td>
                                 <td>10 GB</td>
-                                <td>NE40E-1</td>
-                                <td>蓝汛</td>
                                 <td>110.249.212.13/30</td>
-                                <td><div id="sparkline-9"></div></td>
-                                <td><div id="sparkline-10"></div></td>
+                                <td><div id="sparkline-1"></div></td>
+                                <td><div id="sparkline-2"></div></td>
                             </tr>
 
                             <tr>
                                 <td>GigabitEthernet2/2/4</td>
                                 <td>10 GB</td>
-                                <td>NE40E-1</td>
-                                <td>蓝汛</td>
                                 <td>110.249.212.17/30</td>
-                                <td><div id="sparkline-11"></div></td>
-                                <td><div id="sparkline-12"></div></td>
-                            </tr>
-
-                            <tr>
-                                <td>GigabitEthernet9/0/0</td>
-                                <td>1 GB</td>
-                                <td>NE40E-1</td>
-                                <td>班班通</td>
-                                <td>110.249.212.21/30</td>
-                                <td><div id="sparkline-13"></div></td>
-                                <td><div id="sparkline-14"></div></td>
-                            </tr>
-
-                            <tr>
-                                <td>GigabitEthernet9/0/1</td>
-                                <td>1 GB</td>
-                                <td>NE40E-1</td>
-                                <td>班班通</td>
-                                <td>110.249.213.5/30</td>
-                                <td><div id="sparkline-15"></div></td>
-                                <td><div id="sparkline-16"></div></td>
-                            </tr>
-
-                            <tr>
-                                <td>GigabitEthernet9/0/2</td>
-                                <td>1 GB</td>
-                                <td>NE40E-1</td>
-                                <td>智慧星</td>
-                                <td>110.249.212.53/30</td>
-                                <td><div id="sparkline-17"></div></td>
-                                <td><div id="sparkline-18"></div></td>
-                            </tr>
-
-                            <tr>
-                                <td>GigabitEthernet9/0/3</td>
-                                <td>1 GB</td>
-                                <td>NE40E-1</td>
-                                <td>精益优连</td>
-                                <td>110.249.213.17/29</td>
-                                <td><div id="sparkline-19"></div></td>
-                                <td><div id="sparkline-20"></div></td>
+                                <td><div id="sparkline-3"></div></td>
+                                <td><div id="sparkline-4"></div></td>
                             </tr>
 
                         </tbody>
 
                     </table>
                 </div><!-- /.box-body -->
-            </div><!-- / 设备端口详情 -->
+            </div><!-- / 上联端口详情 -->
 
         </div>
     </div>
