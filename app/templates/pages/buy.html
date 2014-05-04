@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+{% include 'header.html' with context %}
+{% endblock %}
+
+{% block leftside %}
+{% include 'leftside.html' with context %}
+{% endblock %}
+
+{% block rightside %}
+{% include 'rightside.html' with context %}
+{% endblock %}
+
+
+{% block content %}
+<!-- Main content -->
+<section class="content">
+
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+
+            <!-- 安全防护 -->
+            <div class="box box-info zh">
+
+                <div class="box-header">
+                    <i class="fa fa-plus-circle"></i>
+                    <h3 class="box-title zh">DDOS 套餐</h3>
+                </div>
+
+                <div class="box-body table-responsive no-padding">
+
+                    <table class="table table-hover table-vcenter">
+                        <tr style="height:50px;">
+                            <th>套餐</th>
+                            <th>价格</th>
+                            <th>说明</th>
+                            <th>购买</th>
+                        </tr>
+
+                        <tr>
+                            <td>A 套餐</td>
+                            <td>100 元/次</td>
+                            <td>按次清洗</td>
+                            <td>
+                                <div class="radio">
+                                    <input type="radio" name="ddos_radio" id="radio3" checked="checked">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B 套餐</td>
+                            <td>150 元/月</td>
+                            <td>按月清洗</td>
+                            <td>
+                                <div class="radio">
+                                    <input type="radio" name="ddos_radio" id="radio3">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C 套餐</td>
+                            <td>1500 元/年</td>
+                            <td>按年清洗</td>
+                            <td>
+                                <div class="radio">
+                                    <input type="radio" name="ddos_radio" id="radio3">
+                                </div>
+                            </td> 
+                        </tr>
+
+                    </table>
+                </div><!-- /. box-body -->
+
+                <div class="box-footer clearfix">
+                    <button class="btn btn-danger pull-right">付款&nbsp;<i class="fa fa-shopping-cart"></i></button>
+                </div><!-- /.box-footer -->
+
+            </div><!-- / 安全防护 -->
+
+        </div><!-- /.Left col -->
+    </div>
+</section>   
+<!-- /.content -->
+
+{% endblock %}

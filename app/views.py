@@ -56,3 +56,12 @@ def billing():
         content_title=u'费用查询',
         user_name=u'于旸',
         user_role=u'金石IDC客户')
+
+
+@app.route('/buy')
+def buy():
+    return render_template('pages/buy.html',
+        web_title=app.config['WEB_TITLE'],
+        content_title=u'增值业务',
+        user_name=u'于旸',
+        user_role=u'金石IDC客户')
