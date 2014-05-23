@@ -30,6 +30,13 @@ def safe():
         user_name=u'于旸',
         user_role=u'金石IDC客户')
 
+@app.route('/safe_report')
+def safe_report():
+    return render_template('pages/safe_report.html',
+        web_title=app.config['WEB_TITLE'],
+        content_title=u'安全报表',
+        user_name=u'于旸',
+        user_role=u'金石IDC客户')
 
 @app.route('/device')
 def device():
