@@ -69,6 +69,6 @@ def billing():
 def buy():
     return render_template('pages/buy.html',
         web_title=app.config['WEB_TITLE'],
-        content_title=u'增值业务',
+        content_title=u'企业套餐',
         user_name=u'于旸',
         user_role=u'金石IDC客户')
