@@ -47,11 +47,11 @@ def data():
         user_name=u'于旸',
         user_role=u'金石IDC客户')
 
-@app.route('/safe_report')
-def safe_report():
-    return render_template('pages/safe_report.html',
+@app.route('/report')
+def report():
+    return render_template('pages/report.html',
         web_title=app.config['WEB_TITLE'],
-        content_title=u'安全报表',
+        content_title=u'月度报表',
         user_name=u'于旸',
         user_role=u'金石IDC客户')
 

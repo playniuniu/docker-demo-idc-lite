@@ -70,23 +70,15 @@
 
             </li>
 
-            <li class="treeview">
-
-                <a href="#">
-                    <i class="fa fa-download"></i>
-                    <span class="zh">月度报表</span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-
-                <ul class="treeview-menu">
-                    <li><a href="{{ url_for('safe_report') }}"><i class="fa fa-angle-double-right"></i> <span class="zh">安全报表</span></a></li>
-                </ul>
-
-            </li>
-
             <li class="active">
                 <a href="{{ url_for('billing') }}">
                     <i class="fa fa-jpy"></i> <span class="zh">费用查询</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="{{ url_for('report') }}">
+                    <i class="fa fa-download"></i> <span class="zh">月度报表</span>
                 </a>
             </li>
 
