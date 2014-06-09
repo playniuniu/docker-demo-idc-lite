@@ -30,6 +30,23 @@ def safe():
         user_name=u'于旸',
         user_role=u'金石IDC客户')
 
+@app.route('/seo')
+def seo():
+    return render_template('pages/iframe.html',
+        web_title=app.config['WEB_TITLE'],
+        content_title=u'SEO服务',
+        user_name=u'于旸',
+        user_role=u'金石IDC客户',
+        web_url="http://cn.majesticseo.com/")
+
+@app.route('/data')
+def data():
+    return render_template('pages/data.html',
+        web_title=app.config['WEB_TITLE'],
+        content_title=u'数据服务',
+        user_name=u'于旸',
+        user_role=u'金石IDC客户')
+
 @app.route('/safe_report')
 def safe_report():
     return render_template('pages/safe_report.html',
