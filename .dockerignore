@@ -1,0 +1,16 @@
+### Common ###
+.vscode/
+.git/
+.gitignore
+.dockerignore
+
+### Python ###
+__pycache__
+*/__pycache__
+*/*/__pycache__
+*/*/*/__pycache__
+
+*.py[cod]
+*/*.py[cod]
+*/*/*.py[cod]
+*/*/*/*.py[cod]
